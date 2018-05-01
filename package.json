@@ -1,0 +1,31 @@
+{
+  "name": "redux-form-submit-validation",
+  "description": "Submit validation in Redux Form.",
+  "version": "0.0.46",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "npm": "^6.0.0",
+    "react": "15.6.1",
+    "react-dom": "15.6.1",
+    "react-redux": "5.0.6",
+    "react-router": "^3.2.1",
+    "react-router-dom": "^4.2.2",
+    "react-router-protected-route": "^1.0.0",
+    "react-router-redux": "^4.0.8",
+    "redux": "3.7.2",
+    "redux-form": "7.0.4",
+    "redux-form-website-template": "0.0.41",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
+    "webpack": "^3.11.0"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
