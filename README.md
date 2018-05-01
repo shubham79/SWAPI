@@ -13,7 +13,11 @@ Page 2 (Search Page)
 that are sized relative to their diameter on every keypress in the input field.
 
 =>Used redux-form to implement login .
-=>Have validations in the login page.
+=
+=>Have validations in the login page. 
+=
+=>Used Routing to navigate between pages.
+=
 
 
 
