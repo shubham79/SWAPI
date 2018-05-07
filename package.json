@@ -45,7 +45,7 @@
     "webpack-dev-server": "2.1.0-beta.10"
   },
   "scripts": {
-    "start": "webpack-dev-server --content-base public/ --config webpack/webpack.dev.js",
+    "start": "webpack-dev-server --content-base public/ --history-api-fallback --config webpack/webpack.dev.js",
     "build": "webpack --color --display-error-details --config webpack/webpack.prod.js",
     "lint": "eslint --ext .js --ext .jsx .; exit 0"
   }
