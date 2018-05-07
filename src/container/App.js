@@ -7,7 +7,7 @@ const App = React.createClass({
 			<div>
 				<NavigationContainer />
 				{this.props.children}
-				<hr/>
+				
 
 			</div>	
 		)	

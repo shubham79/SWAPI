@@ -14,8 +14,9 @@ function loginSuccess(data) {
 	}
 }
 
-function loginError() {
-	return { type: types.LOGIN_ERROR_USER }
+function loginError(data) {
+	return { type: types.LOGIN_ERROR_USER,
+	data }
 }
 
 // "Log Out" action creators
@@ -61,10 +62,34 @@ export function manualLogin(
 	) {	
 		//console.log('hqhgdjhgfjsdgfjsdgfjgsdjfgsdjfgsdjfgsdjfgsdjhfgsdjgfjsdfgjsdhgfs')
 	return dispatch => {
-		//dispatch(beginLogin())
+		dispatch(beginLogin())
+		console.log(data);
+		axios.get( `https://swapi.co/api/people/?search=${data.username}`).then(res => {
+			
+		console.log(res);
+		if(res.data.results.length){
+			if(res.data.results[0].birth_year == data.password){
+				dispatch(loginSuccess(data));
+				browserHistory.push('/search');
+			}
+			else
+		{
+			dispatch(loginError(data));
+			alert("wrong username/password!!")
+			let loginMessage = "wrong username / password"
+			return loginMessage	
+		}
 
-		dispatch(loginSuccess(data))
-		browserHistory.push('./search')				
+		}
+		
+		else
+		{
+			dispatch(loginError(data));
+			alert("wrong username/password!!")
+			let loginMessage = "wrong username / password"
+			return loginMessage	
+		}
+		})			
 	}
 }
 

@@ -15,7 +15,7 @@ var buttonStyle = {
 
 export default class Navigation extends Component {
 	
-	_logout = function (event){
+	_logout (event){
 		event.preventDefault()
 		alert("Hi I am logout");
 		this.props.manualLogout()
